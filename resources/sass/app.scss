@@ -1,0 +1,276 @@
+@import 'reset';
+@import 'fonts';
+
+// packages
+@import '~swiper/dist/css/swiper';
+
+body {
+    font-family: sans-serif;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 212px;
+    transform: translateX(-50%);
+    height: 22px;
+    background: url(/img/header.png) no-repeat center;
+    background-size: contain;
+    z-index: 2;
+}
+
+.video {
+    position: relative;
+    background: url('/img/bg-video.jpg') no-repeat center;
+    background-size: cover;
+    // min-height: 100vh;
+    height: 0;
+    padding-bottom: 56.25%;
+    z-index: 1;
+    overflow: hidden;
+
+    .video-viewport {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 135%;
+            height: auto;
+        }
+    }
+
+    .instructions {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .text {
+            font-family: 'DIN Alternate Bold', sans-serif;
+            font-size: 10px;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        .arrow {
+            width: 18px;
+            height: 30px;
+            margin-left: 10px;
+            background: url('/img/arrow.svg') no-repeat center;
+            background-size: contain;
+            animation: rotation 2s infinite;
+        }
+
+        @media screen and (min-width: 595px) {
+            display: none;
+        }
+    }
+}
+
+.anthems {
+    position: relative;
+    min-height: 772px;
+    height: 100vh;
+    background: url('/img/bg-anthems-mobile.jpg') no-repeat center;
+    background-size: cover;
+
+    > .text {
+        position: absolute;
+        top: 62%;
+        left: 50%;
+        width: 200px;
+        transform: translateX(-50%);
+        font-family: 'DIN Condensed Bold', sans-serif;
+        font-size: 14px;
+        line-height: 1.36;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .download {
+        position: absolute;
+        top: calc(62% + 136px);
+        left: 50%;
+        transform: translateX(-50%);
+
+        .button {
+            width: 154px;
+        }
+
+        .text {
+            margin-top: 40px;
+            font-family: 'DIN Condensed Bold', sans-serif;
+            font-size: 14px;
+            line-height: 1.36;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        a {
+            display: block;
+            width: 180px;
+            height: 87px;
+            background: url('/img/bg-download.png') no-repeat center;
+            background-size: contain;
+        }
+    }
+
+    .green-text {
+        display: none;
+    }
+
+    @media screen and (min-width: 800px) {
+        background-image: url('/img/bg-anthems-desktop.jpg');
+
+        > .text {
+            top: 150px;
+            left: 50%;
+            transform: translateX(-400px);
+            text-align: left;
+        }
+
+        .download {
+            position: absolute;
+            top: 358px;
+            left: 50%;
+            transform: translate(206px, -50%);
+        }
+
+        .green-text {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(201px, 41%);
+            display: block;
+            opacity: 0.6;
+            font-size: 36px;
+            font-weight: 400;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .mobile-hidden {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .desktop-hidden {
+        display: none;
+    }
+}
+
+.instagram {
+    padding-bottom: 5px;
+    background-color: #e3e3e3;
+
+    .instructions {
+        padding: 36px 36px 0 72px;
+        font-family: 'DIN Condensed Bold', sans-serif;
+        color: #a2a2a2;
+
+        strong {
+            color: #8b8a8a;
+        }
+    }
+
+    .hashtag {
+        position: relative;
+        width: 100%;
+        margin-top: -12px;
+        padding: 0 72px;
+        box-sizing: border-box;
+        z-index: 2;
+
+        img {
+            width: 360px;
+        }
+    }
+
+    @media screen and (min-width: 800px) {
+        padding: 100px 0;
+
+        .hashtag {
+            img {
+                width: 480px;
+            }
+        }
+    }
+}
+
+.green-text {
+    color: #8bb53c;
+    font-size: 22px;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-left: 72px;
+
+    @media screen and (min-width: 800px) {
+        display: none;
+    }
+}
+
+.scoreboard-section {
+    min-height: 320px;
+    background: url('/img/bg-scoreboard.jpg') no-repeat center bottom;
+    background-size: cover;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    height: 54px;
+    background-color: #8bb53c;
+    color: #ffffff;
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+
+        li {
+            margin: 0 10px;
+        }
+
+        a {
+            color: #ffffff;
+            font-size: 18px;
+
+            &:active,
+            &:focus {
+                outline: 0;
+            }
+        }
+    }
+}
+
+@keyframes rotation {
+    0%,
+    100% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
