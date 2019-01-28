@@ -97,6 +97,9 @@ class GetInstagramImages extends Command
                 sleep(5);
             }
         } while ($max_id !== null); // Must use "!==" for comparison instead of "!=".
+        \Log::debug($total . ' images found.');
+        \Log::debug($updated . ' images updated.');
+        \Log::debug($new . ' new images added.');
         $this->info($total . ' images found.');
         $this->info($updated . ' images updated.');
         $this->info($new . ' new images added.');

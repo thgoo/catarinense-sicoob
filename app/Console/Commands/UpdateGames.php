@@ -64,6 +64,7 @@ class UpdateGames extends Command
                     'match_time' => Carbon::parse($game->data_realizacao)
                 ]);
             }
+            \Log::debug('All games are now up to date.');
         }
     }
 }

@@ -15,9 +15,20 @@ header {
     width: 212px;
     transform: translateX(-50%);
     height: 22px;
-    background: url(/img/header.png) no-repeat center;
-    background-size: contain;
     z-index: 2;
+
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url(/img/header.png) no-repeat center;
+        background-size: contain;
+
+        &:active,
+        &:focus {
+            outline: 0;
+        }
+    }
 
     @media screen and (min-width: 768px) {
         width: 483px;

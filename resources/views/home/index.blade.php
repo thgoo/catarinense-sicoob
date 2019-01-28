@@ -14,7 +14,7 @@
     <body class="bg-black">
         <div id="app">
             <div class="container">
-                <header></header>
+                <header><a href="http://www.sicoobsc.com.br/" target="_blank"></a></header>
                 <section class="video">
                     <div class="video-viewport">
                         <video src="/video/video720.mp4" muted autoplay loop></video>
