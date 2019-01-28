@@ -89,6 +89,10 @@ export default {
     background-color: #fff;
     font-size: 12px;
     text-align: center;
+
+    @media screen and (min-width: 768px) {
+        font-size: 20px;
+    }
 }
 
 .swiper-container {

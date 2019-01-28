@@ -97,6 +97,8 @@ header {
         line-height: 1.36;
         text-align: center;
         color: #ffffff;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 
     .download {
@@ -135,11 +137,12 @@ header {
         min-height: 0;
         height: 0;
         padding-bottom: 56.25%;
-        background-image: url('/img/bg-anthems-desktop.jpg');
+        background-image: url('/img/bg-anthems-desktop.jpg?v=2');
 
         > .text {
             top: 20%;
-            left: 29%;
+            left: 30%;
+            font-size: 15px;
             text-align: left;
         }
 
@@ -162,9 +165,18 @@ header {
     }
 
     @media screen and (min-width: 1024px) {
+        > .text {
+            left: 28%;
+            font-size: 18px;
+        }
+
         .download {
             top: 35%;
             right: 23%;
+
+            .text {
+                font-size: 18px;
+            }
         }
 
         .green-text {
@@ -181,9 +193,18 @@ header {
     }
 
     @media screen and (min-width: 1440px) {
+        > .text {
+            left: 27%;
+            font-size: 20px;
+        }
+
         .download {
             top: 38%;
             right: 25%;
+
+            .text {
+                font-size: 20px;
+            }
         }
 
         .green-text {
@@ -246,6 +267,10 @@ header {
 
     @media screen and (min-width: 800px) {
         padding: 100px 0;
+
+        .instructions {
+            font-size: 20px;
+        }
 
         .hashtag {
             img {
