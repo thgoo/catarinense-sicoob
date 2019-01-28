@@ -17,7 +17,10 @@
                 <header><a href="http://www.sicoobsc.com.br/" target="_blank"></a></header>
                 <section class="video">
                     <div class="video-viewport">
-                        <video src="/video/video-full.mp4" muted autoplay loop></video>
+                        <video src="/video/video-full.mp4" id="video" muted loop></video>
+                        <div class="play-button" id="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
                     </div>
                     <div class="instructions">
                         <div class="text">Vire a tela</div>
@@ -48,6 +51,7 @@
                         é a vitória<br />
                         da cooperação
                     </div>
+                    <div class="shadow"></div>
                 </section>
                 <section class="instagram">
                     <div class="instructions">
@@ -80,5 +84,28 @@
             </div>
         </div>
         <script src="/js/app.js?v=1.0.4"></script>
+        <script>
+            var video = document.getElementById('video');
+            var playButton = document.getElementById('play-button');
+
+            video.play();
+
+            if(!video.paused) {
+                playButton.classList.add('is-hidden');
+            }
+
+            video.addEventListener('click', function() {
+                if (video.muted && !video.paused) {
+                    video.muted = false;
+                } else if (video.paused) {
+                    video.play();
+                    video.muted = false;
+                    playButton.classList.add('is-hidden');
+                } else {
+                    video.pause();
+                    playButton.classList.remove('is-hidden');
+                }
+            });
+        </script>
     </body>
 </html>
