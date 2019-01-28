@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/brands.css" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" crossorigin="anonymous">
-        <link rel="stylesheet" href="/css/app.css?v=1.0.3">
+        <link rel="stylesheet" href="/css/app.css?v=1.0.4">
     </head>
     <body class="bg-black">
         <div id="app">
@@ -78,6 +78,6 @@
                 </footer>
             </div>
         </div>
-        <script src="/js/app.js?v=1.0.3"></script>
+        <script src="/js/app.js?v=1.0.4"></script>
     </body>
 </html>
