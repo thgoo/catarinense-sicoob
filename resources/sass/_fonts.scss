@@ -11,3 +11,12 @@
     font-weight: normal;
     src: local('DIN Alternate Bold'), url('../fonts/DINAlternate-Bold.woff') format('woff');
 }
+
+@font-face {
+    font-family: 'Homestead Inline';
+    src: url('../fonts/homestead-inline-webfont.woff2') format('woff2'),
+        url('../fonts/homestead-inline-webfont.woff') format('woff'),
+        url('../fonts/homestead-inline-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

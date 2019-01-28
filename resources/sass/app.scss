@@ -80,6 +80,7 @@ header {
 
 .anthems {
     position: relative;
+    width: 100%;
     min-height: 772px;
     height: 100vh;
     background: url('/img/bg-anthems-mobile.jpg') no-repeat center;
@@ -131,31 +132,75 @@ header {
     }
 
     @media screen and (min-width: 800px) {
+        min-height: 0;
+        height: 0;
+        padding-bottom: 56.25%;
         background-image: url('/img/bg-anthems-desktop.jpg');
 
         > .text {
-            top: 150px;
-            left: 50%;
-            transform: translateX(-400px);
+            top: 20%;
+            left: 29%;
             text-align: left;
         }
 
         .download {
-            position: absolute;
-            top: 358px;
-            left: 50%;
-            transform: translate(206px, -50%);
+            top: 28%;
+            right: 18%;
+            left: auto;
+            transform: none;
         }
 
         .green-text {
             position: absolute;
             bottom: 0;
             left: 50%;
-            transform: translate(201px, 41%);
+            transform: translate(70px, 41%);
             display: block;
             opacity: 0.6;
+            font-size: 32px;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .download {
+            top: 35%;
+            right: 23%;
+        }
+
+        .green-text {
+            transform: translate(122px, 41%);
             font-size: 36px;
-            font-weight: 400;
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        .green-text {
+            transform: translate(150px, 41%);
+            font-size: 42px;
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        .download {
+            top: 38%;
+            right: 25%;
+        }
+
+        .green-text {
+            transform: translate(200px, 41%);
+            font-size: 54px;
+        }
+    }
+
+    @media screen and (min-width: 1600px) {
+        .download {
+            top: 40%;
+            right: 26%;
+        }
+
+        .green-text {
+            transform: translate(250px, 41%);
+            font-size: 54px;
         }
     }
 }
@@ -212,10 +257,13 @@ header {
 
 .green-text {
     color: #8bb53c;
+    font-family: 'Homestead Inline', sans-serif;
     font-size: 22px;
     font-weight: 300;
     margin-top: 30px;
     margin-left: 72px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
     @media screen and (min-width: 800px) {
         display: none;
