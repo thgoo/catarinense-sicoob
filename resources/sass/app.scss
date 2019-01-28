@@ -42,7 +42,8 @@ header {
     background-size: cover;
     // min-height: 100vh;
     height: 0;
-    padding-bottom: 41.5%;
+    // padding-bottom: 41.5%;
+    padding-bottom: 56.25%;
     z-index: 1;
     overflow: hidden;
 
@@ -59,7 +60,7 @@ header {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 100%;
+            width: 135%;
             height: auto;
         }
 
@@ -327,7 +328,7 @@ header {
     }
 
     @media screen and (min-width: 800px) {
-        padding: 100px 0;
+        padding: 50px 0;
 
         .instructions {
             font-size: 20px;

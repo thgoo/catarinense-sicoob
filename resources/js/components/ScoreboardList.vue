@@ -2,6 +2,12 @@
     <div class="scoreboard-list">
         <div class="title">Rodada {{ index + 1 }}</div>
         <div class="swiper-container sc2">
+            <div class="swiper-button-prev2">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="swiper-button-next2">
+                <i class="fas fa-chevron-right"></i>
+            </div>
             <div class="swiper-wrapper">
                 <div
                     class="swiper-slide"
@@ -46,6 +52,10 @@ export default {
 
             this.$nextTick(() => {
                 let options = {
+                    navigation: {
+                        nextEl: '.swiper-button-next2',
+                        prevEl: '.swiper-button-prev2',
+                    },
                     centeredSlides: true,
                     slidesPerView: 1.3,
                     breakpointsInverse: true,
@@ -58,6 +68,9 @@ export default {
                         800: {
                             slidesPerView: 4,
                         },
+                        1440: {
+                            slidesPerView: 6,
+                        }
                     },
                 };
 
@@ -71,7 +84,52 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.swiper-button-prev2,
+.swiper-button-next2 {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    color: #222222;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 10px rgba(0,0,0,.25);
+    z-index: 10;
+
+    &:active,
+    &:focus {
+        outline: 0;
+    }
+}
+
+.swiper-button-prev2 {
+    left: 100px;
+}
+
+.swiper-button-next2 {
+    right: 100px;
+}
+
+.swiper-slide {
+    opacity: 0.33;
+
+    &.swiper-slide-prev,
+    &.swiper-slide-next {
+        opacity: 0.66666667;
+    }
+
+    &.swiper-slide-active {
+        opacity: 1;
+    }
+}
+
 .scoreboard-list {
+    position: relative;
     padding: 50px 0;
 
     .title {

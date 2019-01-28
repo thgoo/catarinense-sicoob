@@ -55,6 +55,9 @@ export default {
                         },
                         800: {
                             slidesPerView: 4,
+                        },
+                        1600: {
+                            slidesPerView: 6,
                         }
                     }
                 };
@@ -95,19 +98,10 @@ export default {
     }
 }
 
-.swiper-container {
-    max-height: 260px;
-
-    @media screen and (min-width: 400px) {
-        max-height: 340px;
-    }
-}
-
 .wrapper {
     position: relative;
     margin: 0 auto;
     width: 90%;
-    max-width: 260px;
     height: 0;
     padding-bottom: 90%;
     background-position: center;
@@ -158,10 +152,6 @@ export default {
             font-size: 16px;
             margin-right: 5px;
         }
-    }
-
-    @media screen and (min-width: 400px) {
-        max-width: 340px;
     }
 }
 </style>
