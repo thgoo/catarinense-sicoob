@@ -35,11 +35,11 @@ class GetInstagramImages extends Command
         parent::__construct();
 
         $this->ig = new Instagram(false, false, [
-            'storage' => 'mysql',
-            'dbhost' => '127.0.0.1',
-            'dbname' => 'catarinense_sicoob',
-            'dbusername' => 'root',
-            'dbpassword' => 'secret',
+            'storage' => env('DB_CONNECTION'),
+            'dbhost' => env('DB_HOST'),
+            'dbname' => env('DB_DATABASE'),
+            'dbusername' => env('DB_USERNAME'),
+            'dbpassword' => env('DB_PASSWORD'),
         ]);
     }
 
