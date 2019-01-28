@@ -17,7 +17,7 @@
                 <header><a href="http://www.sicoobsc.com.br/" target="_blank"></a></header>
                 <section class="video">
                     <div class="video-viewport">
-                        <video src="/video/video720.mp4" muted autoplay loop></video>
+                        <video src="/video/video-full.mp4" muted autoplay loop></video>
                     </div>
                     <div class="instructions">
                         <div class="text">Vire a tela</div>
@@ -74,6 +74,7 @@
                         <li><a href="https://twitter.com/SicoobSCRS" target="_blank"><i class="fab fa-twitter"></i></a></li>
                         <li><a href="https://www.facebook.com/sicoobscrs/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="https://www.linkedin.com/company/sicoobscrs/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://www.youtube.com/user/sicoobscrs" target="_blank"><i class="fab fa-youtube"></i></a></li>
                     </ul>
                 </footer>
             </div>
