@@ -86,7 +86,7 @@ export default {
 <style lang="scss" scoped>
 .swiper-button-prev2,
 .swiper-button-next2 {
-    content: '';
+    display: none;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -104,6 +104,10 @@ export default {
     &:active,
     &:focus {
         outline: 0;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: block;
     }
 }
 
