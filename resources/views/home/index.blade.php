@@ -9,7 +9,15 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/brands.css" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" crossorigin="anonymous">
-        <link rel="stylesheet" href="/css/app.css?v=1.0.8">
+        <link rel="stylesheet" href="/css/app.css?v=1.0.9">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133445686-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-133445686-1');
+        </script>
     </head>
     <body class="bg-black">
         <div id="app">
@@ -41,7 +49,7 @@
                     <div class="download">
                         <div class="text">Esse Hino é seu também!</div>
                         <div class="button">
-                            <a href="/files/hino-completo.mp3" download></a>
+                            <a href="/files/hino-completo.mp3" download onclick="gtag('event', 'Download - Hino');"></a>
                         </div>
                     </div>
                     <div class="green-text">
@@ -83,7 +91,7 @@
                 </footer>
             </div>
         </div>
-        <script src="/js/app.js?v=1.0.8"></script>
+        <script src="/js/app.js?v=1.0.9"></script>
         <script>
             var video = document.getElementById('video');
             var playButton = document.getElementById('play-button');

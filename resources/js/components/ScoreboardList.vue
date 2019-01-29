@@ -1,13 +1,13 @@
 <template>
     <div class="scoreboard-list">
         <div class="title">Rodada {{ index + 1 }}</div>
+        <div class="swiper-button-prev2">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="swiper-button-next2">
+            <i class="fas fa-chevron-right"></i>
+        </div>
         <div class="swiper-container sc2">
-            <div class="swiper-button-prev2">
-                <i class="fas fa-chevron-left"></i>
-            </div>
-            <div class="swiper-button-next2">
-                <i class="fas fa-chevron-right"></i>
-            </div>
             <div class="swiper-wrapper">
                 <div
                     class="swiper-slide"
@@ -48,7 +48,7 @@ export default {
         try {
             let res = await window.axios.get('/api/scoreboard');
             this.rounds = res.data.rounds;
-            this.last_round = res.data.last_round.number
+            this.last_round = res.data.last_round.number;
 
             this.$nextTick(() => {
                 let options = {
@@ -70,7 +70,7 @@ export default {
                         },
                         1440: {
                             slidesPerView: 6,
-                        }
+                        },
                     },
                 };
 
@@ -87,9 +87,8 @@ export default {
 .swiper-button-prev2,
 .swiper-button-next2 {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: none;
+    top: 42px;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 48px;
@@ -97,7 +96,7 @@ export default {
     border-radius: 50%;
     color: #222222;
     background-color: #ffffff;
-    box-shadow: 2px 2px 10px rgba(0,0,0,.25);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
     z-index: 10;
 
     &:active,
@@ -106,16 +105,25 @@ export default {
     }
 
     @media screen and (min-width: 768px) {
-        display: flex;
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
 
 .swiper-button-prev2 {
-    left: 100px;
+    left: 10px;
+
+    @media screen and (min-width: 768px) {
+        left: 100px;
+    }
 }
 
 .swiper-button-next2 {
-    right: 100px;
+    right: 10px;
+
+    @media screen and (min-width: 768px) {
+        right: 100px;
+    }
 }
 
 .swiper-slide {
