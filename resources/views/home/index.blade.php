@@ -42,7 +42,7 @@
                 <section class="video">
                     <div class="video-viewport">
                         <video id="video" loop muted playsinline>
-                            <source src="/video/video1080.mp4" type="video/mp4">
+                            <source src="/video/video-final-1080.mp4" type="video/mp4">
                         </video>
                         <div class="play-button" id="play-button">
                             <i class="fas fa-play"></i>
