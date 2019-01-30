@@ -134,8 +134,8 @@
             });
 
             function onClickDownload() {
-                fbq('track', 'Purchase');
-                gtag('event', 'Download - Hino');
+                fbq('trackCustom', 'DownloadHino');
+                gtag('event', 'DownloadHino');
             }
         </script>
     </body>
