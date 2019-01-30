@@ -40,7 +40,7 @@
                 <header><a href="http://www.sicoobsc.com.br/" target="_blank"></a></header>
                 <section class="video">
                     <div class="video-viewport">
-                        <video id="video" muted loop>
+                        <video id="video" autoplay loop muted playsinline>
                             <source src="/video/video1080.mp4" type="video/mp4">
                             <source src="/video/video1080.webm" type="video/webm">
                         </video>
