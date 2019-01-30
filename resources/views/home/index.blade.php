@@ -40,7 +40,10 @@
                 <header><a href="http://www.sicoobsc.com.br/" target="_blank"></a></header>
                 <section class="video">
                     <div class="video-viewport">
-                        <video src="/video/video1080.mp4" id="video" muted loop></video>
+                        <video id="video" muted loop>
+                            <source src="/video/video1080.mp4" type="video/mp4">
+                            <source src="/video/video1080.webm" type="video/webm">
+                        </video>
                         <div class="play-button" id="play-button">
                             <i class="fas fa-play"></i>
                         </div>
