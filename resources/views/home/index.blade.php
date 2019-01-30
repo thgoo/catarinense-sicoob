@@ -29,6 +29,7 @@
         'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '416403555764978');
         fbq('track', 'PageView');
+        fbq('track', 'ViewContent');
       </script>
     </head>
     <body class="bg-black">
@@ -66,7 +67,7 @@
                     <div class="download">
                         <div class="text">Esse Hino é seu também!</div>
                         <div class="button">
-                            <a href="/files/hino-completo.mp3" download onclick="gtag('event', 'Download - Hino');"></a>
+                            <a href="/files/hino-completo.mp3" download onclick="onClickDownload();"></a>
                         </div>
                     </div>
                     <div class="green-text">
@@ -131,6 +132,11 @@
                     playButton.classList.remove('is-hidden');
                 }
             });
+
+            function onClickDownload() {
+                fbq('track', 'Purchase');
+                gtag('event', 'Download - Hino');
+            }
         </script>
     </body>
 </html>
