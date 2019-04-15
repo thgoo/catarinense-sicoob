@@ -1,6 +1,6 @@
 <template>
     <div class="scoreboard-list">
-        <div class="title">Rodada {{ index + 1 }}</div>
+        <div class="title">{{ typeof rounds[index] !== 'undefined' ? rounds[index].name : null }}</div>
         <div class="swiper-button-prev2">
             <i class="fas fa-chevron-left"></i>
         </div>
@@ -47,6 +47,7 @@ export default {
     async mounted() {
         try {
             let res = await window.axios.get('/api/scoreboard');
+            console.log(res.data);
             this.rounds = res.data.rounds;
             this.last_round = res.data.last_round.number;
 

@@ -5,12 +5,18 @@
                 <div class="team home">
                     <div class="picture" :style="{ backgroundImage: `url('${game.home.image}')` }"></div>
                     <div class="name">{{ game.home.name }}</div>
-                    <div class="score">{{ game.home_score }}</div>
+                    <div class="score">
+                        {{ game.home_score }}
+                        <span v-if="game.home_score_penalty">({{ game.home_score_penalty }})</span>
+                    </div>
                 </div>
                 <div class="team guest">
                     <div class="picture" :style="{ backgroundImage: `url('${game.guest.image}')` }"></div>
                     <div class="name">{{ game.guest.name }}</div>
-                    <div class="score">{{ game.guest_score }}</div>
+                    <div class="score">
+                        {{ game.guest_score }}
+                        <span v-if="game.guest_score_penalty">({{ game.guest_score_penalty }})</span>
+                    </div>
                 </div>
             </div>
             <div class="date">{{ game.match_time }}</div>
@@ -75,8 +81,13 @@ export default {
                 }
 
                 .score {
+                    display: flex;
                     margin-right: 10px;
                     text-align: center;
+
+                    span {
+                        margin-left: 5px;
+                    }
                 }
             }
         }
